@@ -1,12 +1,11 @@
-def multiplication_table(number):
-    print(f"Multiplication Table for {number}:")
-    for i in range(1, 11):
-        result = number * i
-        print(f"{number} x {i} = {result}")
+import re
+num=input("Enter the phone number")
+pattern="\d{10}|\d{3}-\d{3}-\d{4}|\(\d{3}\)-\d{3}-\d{4}|\(\d{3}\)\s-\d{3}-\d{4}"
 
-# Get user input for the number
-try:
-    number = int(input("Enter a number: "))
-    multiplication_table(number)
-except ValueError:
-    print("Invalid input. Please enter a valid number.")
+if re.match(pattern,num):
+    print("Vaid number")
+else:
+    print("Invalid number")
+    
+
+
