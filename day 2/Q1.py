@@ -1,49 +1,13 @@
-import nltk
-from nltk.corpus import wordnet
+import re
 
-# Download WordNet data if not already downloaded
-nltk.download("wordnet")
+text=input("Enter the email")
 
-def get_word_meaning(word):
-    # Get the synsets for the given word
-    synsets = wordnet.synsets(word)
-    meanings = []
-    if synsets:
-        for synset in synsets:
-            # Get the definition of the word
-            definition = synset.definition()
-            meanings.append(definition)
-        return meanings
-    else:
-        return None
+pattern="\w*@[^yahoo|^hotmail]\w*\.com|\w*@[^yahoo|^hotmail]\w*\.in|\w*@[^yahoo|^hotmail]\w*\.org"
 
-def suggest_word(word):
-    # Get similar words (suggestions) for the given word
-    suggestions = []
-    for synset in wordnet.synsets(word):
-        for lemma in synset.lemmas():
-            suggestions.append(lemma.name())
-    return suggestions
+#pattern="\w*@[^yahoo|^hotmail]\w*\.[com|in|org]"
+if re.match(pattern,text):
+    print("Vaid email")
+else:
+    print("Invalid email")
 
-def main():
-    while True:
-        word = input("Enter a word to look up (or 'q' to quit): ").lower()
-        if word == "q":
-            break
-        
-        meanings = get_word_meaning(word)
-        if meanings:
-            print("Meanings:")
-            for meaning in meanings:
-                print("- " + meaning)
-        else:
-            print("Word not found. Suggestions:")
-            suggestions = suggest_word(word)
-            if suggestions:
-                print(", ".join(suggestions))
-            else:
-                print("No suggestions found.")
 
-if __name__ == "__main__":
-    main()
-    
