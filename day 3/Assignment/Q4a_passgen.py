@@ -27,8 +27,9 @@ def password_generator():
     password = ""
     for i in password_list:
         password += i
-    label4.config(text=f"{password}")
-    
+#    label4.config(text=f"{password}")
+    label4=tkinter.Label(text=f"{password}")
+    label4.grid(row=4,column=0, padx=10, pady=10)
 
 
 import tkinter
@@ -53,7 +54,7 @@ no_sym=tkinter.Entry()
 no_sym.grid(row=3, column=1, padx=10, pady=10)
 b2=tkinter.Button(text="SUBMIT",command=password_generator)
 b2.grid(row=3, column=3, padx=10, pady=10)
-label4=tkinter.Label(text=" ")
-label4.grid(row=4,column=0, padx=10, pady=10)
+#label4=tkinter.Label(text=" ")
+#label4.grid(row=4,column=0, padx=10, pady=10)
 
 window.mainloop()
