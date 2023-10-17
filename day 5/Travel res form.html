@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>travel</title>
+</head>
+<body>
+    <h1>Travel reservation form</h1>
+    <h4>* denotes mandatory</h4>
+    <form action="">
+        <label for="">Full name*:</label><br>
+        <input type="text"name="fullname"id="fullname"placeholder="FirstName  LastName" required><br>
+        <label for="">Email address*:</label><br>
+        <input type="email"name="emailaddress"required><br>
+        <label for ="dropdown">Select Tour Package*:</label><br>
+        <select id="dropdown"name="place"required>
+         <option value="Goa">Goa</option>
+         <option value="Allapy">Allapy</option>
+         <option value="Kulu Manali">Kulu Manali</option>
+         <option value="Uttar Pradesh">Uttar Pradesh</option>
+        </select><br>
+        <label for="">Arrival date*:</label><br>
+        <input type=""required><br>
+        <label for="">Number of persons*:</label><br>
+        <input type="text"name="number"required><br>
+        <label for="">What would you want to avail?*:</label><br>
+        <input type=""required><br>
+        <label for="">Discount Coupon code:</label><br>
+        <input type="text"name="Discount"><br>
+        <label >Terms and conditions*:</label><br>
+        <input type="radio"name="terms"id="agree"value="agree">
+        <label for="agree" >I agree</label>
+        <input type="radio"name="terms"id="disagree"value="disagree">
+        <label for="disagree" >I disagree</label><br>
+        <input type="submit"name="submit"value="Compete reservation"><br>
+    </form>
+</body>
+</html>

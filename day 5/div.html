@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=d, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: mistyrose;
+        }
+        .image-container{
+            display: inline-block;
+            width: 290px; /* Set the desired square size */
+            height: 300px;
+            margin: 20px;
+            border: 5px solid navy;
+            border-radius: 30px; /* Create a rounded border */
+            overflow: hidden; /* Hide the overflow of the image */            
+        }
+
+        .image {
+            width: 100%; /* Make the image fill the container */
+            /*height: 100%;*/
+            object-fit: cover; /* Maintain aspect ratio and cover the container */
+        }
+        .center-cont{
+            display: flex;
+            justify-content: center; /horizontal alignment/
+            align-items: center; /vertical alignment/
+            height: 100vh; /* 100% viewport height for vertical centering */
+        }
+    </style>
+</head>
+<body>
+    <div class="center-cont">
+        <div class="image-container">
+            <img class="image" src="Image/pic-1.jpg" alt="Cake" width="300" height="300">
+        </div>
+        <div class="image-container">
+            <img class="image" src="Image/pic-2.jpg" alt="Roses" width="200" height="300">
+        </div>
+        <div class="image-container">
+            <img class="image" src="Image/pic-3.webp" alt="Pheonix" width="300" height="300">
+        </div>
+    </div>
+
+</body>
+</html>
